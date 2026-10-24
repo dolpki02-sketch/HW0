@@ -3,9 +3,9 @@
 if [ -f "server" ]; then
     echo "Запуск скомпилированного сервера..."
     ./server
-elif [ -f "server.go" ]; then
+elif [ -f "./cmd/server/server.go" ]; then
     echo "Запуск Go сервера..."
-    go run server.go
+    go run ./cmd/server/server.go
 elif [ -f "server.py" ]; then
     echo "Запуск Python сервера..."
     python3 server.py
